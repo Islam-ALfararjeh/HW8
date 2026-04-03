@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparent Login with Local Background</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* Use YOUR downloaded image */
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+                  url('Designer.png');   /* change to your file name */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', system-ui;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    /* Transparent/glass login card */
+    .login-card {
+      max-width: 440px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(0px);
+      border-radius: 1rem;
+      padding: 3rem;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    /* rest of your form styles (same as before) */
+    .account-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+    /* align-items: center; */
+    }
+    .input-group {
+      margin-bottom: 1rem;
+    }
+    .input-group input {
+        
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 1rem;
+      border: 1px solid #ccc;
+      /* background: rgba(255,255,255,0.9); */
+      background: rgba(255, 255, 255, 0.75);
+    }
+    .login-btn {
+      width: 100%;
+      background: #1a73e8;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+    .row-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .forgot-link {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    /* ... add any additional styles you need ... */
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <!-- <div class="brand-header">🏠 Home · Google Drive</div> -->
+    <div class="account-title">Account Login</div>
+    <div class="input-group">
+      <label></label>
+      <input type="text" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <label></label>
+      <input type="password" placeholder="Password">
+    </div>
+    <button class="login-btn">LOGIN</button>
+    <div class="row-options">
+      <label><input type="checkbox" checked> Remember me</label>
+      <a href="#" class="forgot-link">Forget Password?</a>
+    </div>
+  </div>
+</body>
+</html>
